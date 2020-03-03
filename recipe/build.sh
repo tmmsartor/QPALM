@@ -27,6 +27,3 @@ cd $builddir
 
 cmake $curdir -DCMAKE_BUILD_TYPE=release -DCOVERAGE=ON
 make
-
-#Run the tests with this line enabled
-ctest -VV
