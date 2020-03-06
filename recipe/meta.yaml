@@ -14,12 +14,13 @@ build:
   # not built for all platforms/versions, although selectors are still not allowed.
   # See https://conda-forge.org/docs/maintainer/knowledge_base.html#noarch-python
   # for more details.
-  # noarch: python
   skip: True  # [win and vc<14]
   skip: True  # [win]
   skip: True  # [py<35 or py>37]
 
-  number: {{ environ.get('GIT_DESCRIBE_NUMBER', '0') }}
+  number: 1
+  # noarch: python
+  # number: {{ environ.get('GIT_DESCRIBE_NUMBER', '0') }}
   string: {{ [build_number, ('h' + PKG_HASH), environ.get('GIT_DESCRIBE_HASH', '')]|join('_') }}
 
   # If the installation is complex, or different between Unix and Windows,
