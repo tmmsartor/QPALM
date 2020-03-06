@@ -15,6 +15,10 @@ build:
   # See https://conda-forge.org/docs/maintainer/knowledge_base.html#noarch-python
   # for more details.
   # noarch: python
+  number: 1
+  skip: True  # [win and vc<14]
+  skip: True  # [win]
+  skip: True  # [py<35 or py>37]
 
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', '0') }}
   string: {{ [build_number, ('h' + PKG_HASH), environ.get('GIT_DESCRIBE_HASH', '')]|join('_') }}
@@ -26,6 +30,7 @@ build:
   # to limit to Python 3.5 and newer, or "skip: True  # [not win]" to limit
   # to Windows.
   # script: "{{ PYTHON }} -m pip install . -vv"
+  #
 
 requirements:
   build:
@@ -34,7 +39,6 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - pip
   run:
     - python
 
@@ -55,11 +59,11 @@ test:
     - tests/
 
 # Uncomment and fill in QPALM metadata
-#about:
-#  home: https://github.com/conda-forge/conda-smithy
-#  license: BSD-3-Clause
-#  license_family: BSD
-#  license_file: LICENSE
+about:
+  home: https://github.com/Benny44/QPALM
+  license: GPL3
+  license_family: GPL
+  license_file: LICENSE
 
 # Uncomment the following if this will be on a forge
 # Remove these lines if this is only be used for CI
