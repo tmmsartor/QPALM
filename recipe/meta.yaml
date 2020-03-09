@@ -40,24 +40,25 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - metis==5.1.0
+    - iomp5
   host:
     - python
   run:
     - python
-    - metis
+    - metis==5.1.0
+    - iomp5
 
 test:
   # Some packages might need a `test/commands` key to check CLI.
   # List all the packages/modules that `run_test.py` imports.
   imports:
-    - QPALM
   # Run your test commands here
   commands:
-    - QPALM --help
-    - pytest
+    - ctest -VV
   # declare any test-only requirements here
   requires:
-    - pytest
+    - ctest
   # copy over any needed test files here
   source_files:
     - tests/

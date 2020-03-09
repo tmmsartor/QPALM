@@ -11,3 +11,8 @@ skip_render:
   - .github/workflows
 provider:
   linux: travis
+channels:
+  sources:
+    - conda-forge
+    - defaults
+    - psi4
