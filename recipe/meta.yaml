@@ -41,9 +41,9 @@ requirements:
     - cmake
   host:
     - python
-    - libmetis
   run:
     - python
+    - metis
 
 test:
   # Some packages might need a `test/commands` key to check CLI.
