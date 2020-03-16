@@ -58,7 +58,7 @@ test:
     - ctest -VV
   # declare any test-only requirements here
   requires:
-    - ctest
+    - cmake
   # copy over any needed test files here
   source_files:
     - tests/

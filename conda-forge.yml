@@ -13,6 +13,6 @@ provider:
   linux: travis
 channels:
   sources:
+    - psi4
     - conda-forge
     - defaults
-    - psi4
