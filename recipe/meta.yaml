@@ -42,6 +42,9 @@ requirements:
     - cmake
     - metis==5.1.0
     - iomp5
+    - liblapack
+    - liblapacke
+    - mkl
   host:
     - python
   run:
