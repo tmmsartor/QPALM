@@ -3,7 +3,7 @@ c_compiler:
 c_compiler_version:
 - '7'
 channel_sources:
-- psi4, conda-forge,defaults
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -12,7 +12,15 @@ cxx_compiler_version:
 - '7'
 docker_image:
 - condaforge/linux-anvil-comp7
+liblapack:
+- 3.8.0 *netlib
+liblapacke:
+- 3.8.0 *netlib
+mkl:
+- '2019'
 pin_run_as_build:
+  mkl:
+    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x

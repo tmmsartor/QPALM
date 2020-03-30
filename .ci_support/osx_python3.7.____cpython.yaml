@@ -12,11 +12,19 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '9'
+liblapack:
+- 3.8.0 *netlib
+liblapacke:
+- 3.8.0 *netlib
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
 - '10.9'
+mkl:
+- '2019'
 pin_run_as_build:
+  mkl:
+    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
