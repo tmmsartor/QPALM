@@ -3,7 +3,7 @@ c_compiler:
 c_compiler_version:
 - '7'
 channel_sources:
-- conda-forge,defaults
+- psi4, conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
