@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export MINICONDA_LIB=${HOME}/.local/opt/miniconda/lib
-export MINICONDA_INCLUDE=${HOME}/.local/opt/miniconda/include
 export CMAKE_BUILD_TYPE=Release
 
 curdir=`pwd`
